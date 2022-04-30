@@ -24,7 +24,7 @@ const num = 1 + 1;
 console.log(num); 
 
 
-// Шаблонніе строки
+// Шаблонные строки
 const sttReng = `Hi ${stRing},and ${myAdress}`;
 console.log(sttReng);
 
@@ -91,21 +91,33 @@ console.log(languages); // ["C", "Python", "C#", "Swift", "Go", "JavaScript"]
 function testFunktion() {
         const x = 10;
         const y = 15;
-        console.log(x + y);
+        console.log(x + y);  // 25
 }
 testFunktion();
 
 
 
 function hello() {
-    console.log(`Hello!!!`);
+    console.log(`Hello!!!`);   // Hello!!!
 }
 hello();
+
+
+//             # Функции и аргументы #
+
 
 
 function front(a , b) {
     console.log(a + b)
 }
-front(100,100);
-front(50,50);
-front(24,44);
+front(100,100);                 //200
+front(50,50);                   //100
+front(24,44);                    //68
+
+
+// Вывод данных введеных пользователем
+document.querySelector(`.out-3`).addEventListener(`clik`,function() {
+    const s = document.querySelector(`.i-3`).value;
+    document.querySelector(`.out-3`).innerHTML = `Hello` + s;
+    console.log(`Hello` + s);
+});
