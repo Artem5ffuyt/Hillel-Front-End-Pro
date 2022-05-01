@@ -112,7 +112,39 @@ function front(a , b) {
 }
 front(100,100);                 //200
 front(50,50);                   //100
-front(24,44);                    //68
+front(24,44);                    //
+
+
+
+
+//               # retern 
+//             Прерывание функции
+
+function f4() {
+    console.log(1);
+    return;
+    console.log(2);
+    console.log(3);
+}
+f4();
+
+
+
+function indexOfEmul(are , num) {
+    for (let i = 0; i < are.lengh; i++) {
+        if (arr[i] === num)return i;
+    }
+    return -1;
+}
+let result = indexOfEmul([22,33,44] , 45);
+console.log(result);
+
+
+
+
+
+
+
 
 
 // Вывод данных введеных пользователем
@@ -121,3 +153,5 @@ document.querySelector(`.out-3`).addEventListener(`clik`,function() {
     document.querySelector(`.out-3`).innerHTML = `Hello` + s;
     console.log(`Hello` + s);
 });
+
+
