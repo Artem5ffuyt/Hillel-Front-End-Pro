@@ -141,7 +141,17 @@ console.log(result);
 
 
 
+let aa = 9;
+aa = 10;
 
+function r88(bb) {
+    document.querySelector('.r88').textContent = bb;
+    
+}
+
+document.querySelector(`button`).onclick = r88; 
+
+r88(90);
 
 
 
