@@ -158,6 +158,9 @@ r88(90);
 
 
 // Вывод данных введеных пользователем
+
+
+
 document.querySelector(`.out-3`).addEventListener(`clik`,function() {
     const s = document.querySelector(`.i-3`).value;
     document.querySelector(`.out-3`).innerHTML = `Hello` + s;
