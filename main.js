@@ -144,27 +144,20 @@ console.log(result);
 let aa = 9;
 aa = 10;
 
-function r88(bb) {
-    document.querySelector('.r88').textContent = bb;
-    
-}
 
-document.querySelector(`button`).onclick = r88; 
-
-r88(90);
 
 
 
 
 
 // Вывод данных введеных пользователем
+function testJs(){
+// document.write("запуск");
+document.getElementById("bbq").append("запуск");
+}
 
 
 
-document.querySelector(`.out-3`).addEventListener(`clik`,function() {
-    const s = document.querySelector(`.i-3`).value;
-    document.querySelector(`.out-3`).innerHTML = `Hello` + s;
-    console.log(`Hello` + s);
-});
+
 
 
