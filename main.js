@@ -156,7 +156,13 @@ function testJs(){
 document.getElementById("bbq").append("запуск");
 }
 
+function tsta(){
+    document.getElementById("tstaa").append("запустился111");
+}
 
+function divos() {
+alert('нажмииииии');
+}
 
 
 
