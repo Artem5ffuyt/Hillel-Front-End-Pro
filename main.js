@@ -151,12 +151,12 @@ aa = 10;
 
 
 // Вывод данных введеных пользователем
-function testJs(){
+function testJs() {
 // document.write("запуск");
 document.getElementById("bbq").append("запуск");
 }
 
-function tsta(){
+function tsta() {
     document.getElementById("tstaa").append("запустился111");
 }
 
