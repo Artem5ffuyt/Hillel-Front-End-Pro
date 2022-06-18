@@ -1,18 +1,27 @@
 
+let naMe = prompt('Введить логін');
+if(naMe == 'admin') {
+    alert('Ваш логін вірний' );
+}else {
+    alert('Не верно!');
+}
 
-// Переменные
-const naMe = prompt('Як ваше имя');
-const surname = prompt('Ваше прізвище');
-const age = prompt('Скількі вам років');
-
-console.log(naMe );
-console.log(surname);
-console.log(age);
-
- alert('Вітатю тебе ' + surname +' '+ naMe +' '+' тобі вже є 18 ти прийнятий')
+let pasWord = prompt('Введить пароль');
+if( pasWord == 'qWeRty123') {
+    alert('Ваш пароль вірний' );
+}else {
+    alert('Не верно!');
+}
 
 
+let ageEs = prompt('Скільки вам років?')
+alert(`Ok!!! Вам ${ageEs}  років` );
 
+
+
+let nuMe = prompt('Введить 4 числа');
+let a = Math.max (nuMe);
+console.log(a);
 
 
 
