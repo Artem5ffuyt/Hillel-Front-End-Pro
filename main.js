@@ -1,5 +1,5 @@
 
-let naMe = prompt('Введить логін');
+/*let naMe = prompt('Введить логін');
 if(naMe == 'admin') {
     alert('Ваш логін вірний' );
 }else {
@@ -19,10 +19,14 @@ alert(`Ok!!! Вам ${ageEs}  років` );
 
 
 
+// водить цифри без коми))
 let nuMe = prompt('Введить 4 числа');
-let a = Math.max (nuMe);
-console.log(a);
 
+let a = Math.min(...nuMe);
+let b = Math.max(...nuMe); 
+
+alert(`Рішення ${a} * ${b} = ${a*b}` )
+*/
 
 
 
