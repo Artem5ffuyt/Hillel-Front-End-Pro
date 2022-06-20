@@ -28,5 +28,14 @@ let b = Math.max(...nuMe);
 alert(`Рішення ${a} * ${b} = ${a*b}` )
 */
 
+let muWe = prompt(`Сделайте ход`)
+if (muWe == 32) {
+    alert('верний ход')
+}else if(muWe == 23) {
+    alert('верний ход')
+}else {
+    alert('Ход не верній')
+}
+
 
 
