@@ -1,30 +1,40 @@
 
-let naMe = prompt('Введить логін');
-if(naMe == 'admin') {
-    alert('Ваш логін вірний' );
-}else {
-    alert('Не верно!');
+let board = prompt(`зробите хід `);
+
+for (let i = 0; i < 8; i++) {
+    };
+
+const ddMove = (y, x)=>{
+if (x >= 0 && x <= 7 && y >= 0 && y <= 7 && board(x)(y) == null) {
+    board(x)(y)
 }
+};
 
-let pasWord = prompt('Введить пароль');
-if( pasWord == 'qWeRty123') {
-    alert('Ваш пароль вірний' );
-}else {
-    alert('Не верно!');
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function addMoves(x, y) {
+    if (x + 1, y + 2) {
+        board == true
+    } if (x + 2, y + 1) {
+        board == true;
+    } if (x + 2, y - 1) {
+        board == true
+    } if (x + 1, y - 2) {
+        board == true
+    } if (x - 1, y - 2) {
+        board == true
+    } if (x - 2, y - 1) {
+        board == true
+    } if (x - 2, y + 1) {
+        board == true;
+    } if (x - 1, y + 2) {
+        board == true
+    } else {
+        board == false
+    }
+};
+if(board == true){
+    alert(`ok`)
+} else if (board == false){
+    alert(`yes`)
+};
+    
+console.log(addMoves)
