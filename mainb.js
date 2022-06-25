@@ -1,4 +1,4 @@
-let ageEs = prompt('Скільки вам років?');
+let ageEs = parseInt( prompt('Скільки вам років?'));
 if(ageEs == 1 ) {
     alert(` Вам ${ageEs} рік`);
 }

@@ -1,40 +1,29 @@
 
-let board = prompt(`зробите хід `);
+const initialX = + prompt(`Start position x. Max 8,min 0`)
+const initialY = + prompt(`Start position y. Max 8,min 0`)
 
-for (let i = 0; i < 8; i++) {
-    };
 
-const ddMove = (y, x)=>{
-if (x >= 0 && x <= 7 && y >= 0 && y <= 7 && board(x)(y) == null) {
-    board(x)(y)
+
+if (initialX > 0 && initialX < 9  && initialY) {
+
 }
-};
 
-function addMoves(x, y) {
-    if (x + 1, y + 2) {
-        board == true
-    } if (x + 2, y + 1) {
-        board == true;
-    } if (x + 2, y - 1) {
-        board == true
-    } if (x + 1, y - 2) {
-        board == true
-    } if (x - 1, y - 2) {
-        board == true
-    } if (x - 2, y - 1) {
-        board == true
-    } if (x - 2, y + 1) {
-        board == true;
-    } if (x - 1, y + 2) {
-        board == true
-    } else {
-        board == false
-    }
-};
-if(board == true){
-    alert(`ok`)
-} else if (board == false){
-    alert(`yes`)
-};
-    
-console.log(addMoves)
+const moveX = +prompt(`move position x`)
+const moveY = +prompt(`move position y`)
+
+const moveUpLong = (initialX + 2 === moveX) && ((initialY - 1 === moveY)  || (initialY + 1 === moveY) || (initialY + 2 === moveY))
+                   (initialX + 1 === moveX) && ((initialY - 2 === moveY) || (initialY + 2 === moveY) || (initialY - 2 === moveY))
+
+const moveShort = (initialX - 2 === moveX) && ((initialY - 1 === moveY) || (initialY + 1 === moveY) || (initialY + 2 === moveY))
+                  (initialX - 1 === moveX) && ((initialY - 2 === moveY) || (initialY + 2 === moveY) || (initialY + 1 === moveY))
+
+
+if (moveX && moveY === true){
+    alert(`right move`)
+} else{
+    alert(`wrong move`)
+}
+
+console.log(moveX,moveY)
+
+
