@@ -24,6 +24,3 @@ if (moveUpLong && moveShort === true){
     alert(`wrong move`)
 }
 
-console.log(moveX,moveY)
-
-
