@@ -1,13 +1,12 @@
-let naMe = prompt('Введить логін');
-if(naMe == 'admin') {
-    alert('Ваш логін вірний' );
-}else {
-    alert('Не верно!');
+let namme = prompt ('Введить логін');
+let pasword = prompt ('Введить пароль');
+
+
+if (namme === 'admin' && pasword === `qWeRty123`) {
+ alert(`пароль вірний`)
+} else {
+    alert(`пароль або логін не вірний`)
 }
 
-let pasWord = prompt('Введить пароль');
-if( pasWord == 'qWeRty123') {
-    alert('Ваш пароль вірний' );
-}else {
-    alert('Не верно!');
-}
+
+

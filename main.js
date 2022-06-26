@@ -11,14 +11,14 @@ if (initialX > 0 && initialX < 9  && initialY) {
 const moveX = +prompt(`move position x`)
 const moveY = +prompt(`move position y`)
 
-const moveUpLong = (initialX + 2 === moveX) && ((initialY - 1 === moveY)  || (initialY + 1 === moveY) || (initialY + 2 === moveY))
-                   (initialX + 1 === moveX) && ((initialY - 2 === moveY) || (initialY + 2 === moveY) || (initialY - 2 === moveY))
+const moveUpLong = (initialX + 2 === moveX) && (initialY - 1 === moveY)  || (initialY + 1 === moveY) || (initialY - 2 === moveY) ||
+                   (initialX + 1 === moveX) && (initialY - 2 === moveY) || (initialY + 2 === moveY) || (initialY - 1 === moveY)
 
-const moveShort = (initialX - 2 === moveX) && ((initialY - 1 === moveY) || (initialY + 1 === moveY) || (initialY + 2 === moveY))
-                  (initialX - 1 === moveX) && ((initialY - 2 === moveY) || (initialY + 2 === moveY) || (initialY + 1 === moveY))
+const moveShort = (initialX + 2 === moveX) && (initialY - 1 === moveY) || (initialY + 1 === moveY) || (initialY - 2 === moveY) ||
+                  (initialX + 1 === moveX) && (initialY - 2 === moveY) || (initialY + 2 === moveY) || (initialY - 1 === moveY)
 
 
-if (moveX && moveY === true){
+if (moveUpLong && moveShort === true){
     alert(`right move`)
 } else{
     alert(`wrong move`)

@@ -1,13 +1,13 @@
-let ageEs = parseInt( prompt('Скільки вам років?'));
-if(ageEs == 1 ) {
-    alert(` Вам ${ageEs} рік`);
+let age = parseInt( prompt('Скільки вам років?'));
+if(age === 1 ) {
+    alert(` Вам ${age} рік`);
 }
-if (ageEs ==2) {alert(`Вам ${ageEs} роки`);
+if (age ==2) {alert(`Вам ${age} роки`);
 }
-if (ageEs ==3) {alert(`Вам ${ageEs} роки`);
+if (age ==3) {alert(`Вам ${age} роки`);
 }
-if (ageEs ==4) {alert(` Вам ${ageEs} роки`);
+if (age ==4) {alert(` Вам ${age} роки`);
 } 
-if (ageEs >=5) {alert(` Вам ${ageEs} рокiв`);
+if (age >=5) {alert(` Вам ${age} рокiв`);
 }
 
