@@ -13,17 +13,41 @@ alert(arr); */
 
 /*2. Юзер вводить розмір масиву. Заповнити новостворений масив рандомними
  (ЦІЛИМИ) значеннями та порахувати їх середнє арифметичне. Вивести цей 
- масив на екран, та результат розрахунку.*/
+ масив на екран, та результат розрахунку.
 
- let arr = prompt(`Введить цифру`)
- new Array(arr);
+ let num = parseInt(prompt(`Введить цифру`))
+ let newArr = new Array(num)
+
+ 
+ let sum =0;
+  for(i=0; i<newArr.length; i++){
+    newArr[i] = Math.ceil(Math.random() * 100)
+    sum += newArr[i]
+}
+let b = sum /num;
+
+
+alert(`${newArr} Середнє арифметичне значення ${b}`)*/
+
+
+
+
+
+ 
  
 
 
-  arr = Math.ceil(Math.random() * 100);
+ 
+ 
+
+ 
+
+  
+
+
 
  
  
 
- console.log(typeof(arr))
+ 
  
