@@ -57,25 +57,25 @@ let nums = parseInt(prompt(`Введить розмір масиву`))
 let nuwArr = new Array(nums)
 
 let sumArr = prompt(`Введить значення  масиву`) 
-let q = new Array(sumArr)
 for( i=0; i<=nuwArr.length; i++){
-    q[i] = Math.ceil(Math.min( [i]))
+    sumArr[i] *=2
 
     console.log(sumArr[i])
-    
-
 } 
 
- function fubNav(q){
-    q[i] = Math.ceil(Math.min())
+ function fubNav(sumArr){
+    sumArr.Math.ceil(Math.max())
 
-    return(q.Math.ceil(Math.min( [i])))
- }
+    return(sumArr)
 
-
-// }
-   alert( q[i])
+    
   
+ }
+ let e = [i]
+ alert(e)
+    
+
+ 
 
  
 
