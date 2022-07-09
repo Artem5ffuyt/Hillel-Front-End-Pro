@@ -53,31 +53,28 @@ alert(`${newArr} Середнє арифметичне значення ${b}`)
  Знайти мінімальний і максимальний елементи створеного масиву і поміняти їх місцями.
  Вивести результат: Мінімальний = . Максимальний =. Новий масив =. */
 
-let nums = parseInt(prompt(`Введить розмір масиву`))
-let nuwArr = new Array(nums)
+let nums = parseInt(prompt(`Введить розмір масиву`));
+let nuwArr = []
+nuwArr = nums;
 
-let sumArr = prompt(`Введить значення  масиву`) 
-for( i=0; i<=nuwArr.length; i++){
-    sumArr[i] *=2
+let sumArr = prompt(`Введить значення  масиву`);
 
-    console.log(sumArr[i])
-} 
-
- function fubNav(sumArr){
-    sumArr.Math.ceil(Math.max())
-
-    return(sumArr)
-
-    
+for(i=0; i<nuwArr.length; i++){
+    sumArr[i]
+    if (sumArr[i] > nuwArr.length ){
+        alert(`uui`)
+    }
   
- }
- let e = [i]
- alert(e)
-    
+    Math.min(...sumArr)
+    Math.max(...sumArr)
+}
+let a = Math.min(...sumArr);
+let b = Math.max(...sumArr);
 
- 
 
- 
+
+console.log( Math.min(...sumArr));
+console.log( Math.max(...sumArr));
 
  
 
