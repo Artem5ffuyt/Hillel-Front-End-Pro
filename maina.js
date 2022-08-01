@@ -29,7 +29,7 @@ let summ3 = [1,4,3]
  counter++;
  console.log(counter)
  }
-*/
+
 
 let counter =0;
 function nameBut(el){
@@ -47,4 +47,17 @@ console.log(el.value);
   text.title = "gggg"
   console.log(text.title)
   text.style.color = "#red"
-  
+*/
+
+
+let entYouMame = prompt(`Enter you name`).trim();
+
+let entWord = entYouMame.toLowerCase();
+
+console.log(entWord.length)
+
+let youAge = +prompt(`${entWord} Enter you age`)
+
+let arrNumb = youAge;
+console.log(youAge)
+
