@@ -47,7 +47,7 @@ console.log(el.value);
   text.title = "gggg"
   console.log(text.title)
   text.style.color = "#red"
-*/
+
 
 
 let entYouMame = prompt(`Enter you name`).trim();
@@ -61,3 +61,4 @@ let youAge = +prompt(`${entWord} Enter you age`)
 let arrNumb = youAge;
 console.log(youAge)
 
+*/

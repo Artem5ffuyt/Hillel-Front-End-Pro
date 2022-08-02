@@ -115,3 +115,41 @@ if ( moveUpLong || moveShort){
 
 
 
+         //     $$$$$$$$$$ Lesson 1 $$$$$$$$$$$$$$$
+                      //Food prices 🍎🍊🥝
+/*Задача:
+Вывести в консоль информацию о:
+каждого продукта с учетом его количества и скидки;
+финальную сумму по всем продуктам.
+все подсчеты производим с помощью формул, а не просто выводим в консоль цифры)                      
+
+         Входные данные:
+         let captionString = `Food prices ≠ <ВЫВОД ТЕКУЩЕГО ДНЯ>.<ВЫВОД ТОЧНОГО МЕСЯЦА>.<ВЫВОД ТОЧНОГО ГОДА>`,
+    
+         apple=`🍎`,
+         applePrice = 10,
+         appleCount = 3,
+         appleSalePercent = 7,
+     
+         orange = `🍊`,
+         orangePrice = 12,
+         orangeCount = 2,
+         orangeSalePercent = 3,
+     
+         kiwi = `🥝`,
+         kiwiPrice = 15,
+         kiwiCount = 10,
+         kiwiCountryPercent = 10;*/
+         
+let captionString = `Food prices for ` 
+let day = new Date().getDate();
+let mont = new Date().getMonth();
+let yea =  new Date().getFullYear();
+
+
+
+let finPraceFor = `Final price for`;
+
+
+
+console.log(`${captionString}- ${day }.${mont }.${yea} `)
