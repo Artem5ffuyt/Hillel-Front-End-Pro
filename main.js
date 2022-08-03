@@ -141,15 +141,47 @@ if ( moveUpLong || moveShort){
          kiwiCount = 10,
          kiwiCountryPercent = 10;*/
          
-let captionString = `Food prices for ` 
+let captionString = `Food prices for = ` ;
 let day = new Date().getDate();
 let mont = new Date().getMonth();
+    mont++; 
 let yea =  new Date().getFullYear();
 
+// Aplle price
+const aplle =`🍎`;
+const applePrice = 10;
+const appleCount = 3;
+const appleSalePercent = 2.1;
+
+const resultApple = applePrice * appleCount - appleSalePercent;
 
 
-let finPraceFor = `Final price for`;
+// Orange price
+const orange = `🍊`;
+const orangePrice = 12;
+const orangeCount = 2;
+const orangeSalePercent = 0.72;
+
+const resultOrange = orangePrice * orangeCount - orangeSalePercent;
 
 
+// Kivi price
+const kiwi = `🥝`;
+const kiwiPrice = 15;
+const kiwiCount = 10;
+const kiwiCountryPercent = 15;
 
-console.log(`${captionString}- ${day }.${mont }.${yea} `)
+const resultkiwi = kiwiPrice * kiwiCount + kiwiCountryPercent;
+
+const finPraceFor = `Final price for`;
+
+const totalResult = resultApple + resultOrange + resultkiwi;
+
+
+console.log(`${captionString.replace('=', '-')} ${day }.${mont}.${yea} `)
+
+console.log(`${finPraceFor} ${appleCount} ${aplle} = ${resultApple.toFixed()} UAH` )
+console.log(`${finPraceFor} ${orangeCount} ${orange} = ${resultOrange.toFixed()} UAH`)
+console.log(`${finPraceFor} ${kiwiCount} ${kiwi} = ${resultkiwi.toFixed()} UAH`)
+
+console.log(`Final price for all products = ${totalResult.toFixed()} UAH`);
