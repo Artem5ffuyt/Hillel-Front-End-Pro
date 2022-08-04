@@ -140,48 +140,51 @@ if ( moveUpLong || moveShort){
          kiwiPrice = 15,
          kiwiCount = 10,
          kiwiCountryPercent = 10;*/
-         
-let captionString = `Food prices for = ` ;
-let day = new Date().getDate();
-let mont = new Date().getMonth();
-    mont++; 
-let yea =  new Date().getFullYear();
 
-// Aplle price
+
+
+         
+let captionString = `Food prices for = `;
+let date = new Date(),
+    day = date.getMonth(),
+    month = date.getMonth()+1,
+    year = date.getFullYear();
+
 const aplle =`🍎`;
 const applePrice = 10;
 const appleCount = 3;
-const appleSalePercent = 2.1;
+const appleSalePercent = 7;
 
-const resultApple = applePrice * appleCount - appleSalePercent;
+const resultApple =  applePrice * appleCount * appleSalePercent / 100;
+const totalResultApple = applePrice * appleCount - resultApple ;
 
 
-// Orange price
 const orange = `🍊`;
 const orangePrice = 12;
 const orangeCount = 2;
-const orangeSalePercent = 0.72;
+const orangeSalePercent = 3;
 
-const resultOrange = orangePrice * orangeCount - orangeSalePercent;
+const resultOrange = orangePrice * orangeCount * orangeSalePercent / 100;
+const totalResultOrange = orangePrice * orangeCount - resultOrange;
 
 
-// Kivi price
 const kiwi = `🥝`;
 const kiwiPrice = 15;
 const kiwiCount = 10;
-const kiwiCountryPercent = 15;
+const kiwiCountryPercent = 10;
 
-const resultkiwi = kiwiPrice * kiwiCount + kiwiCountryPercent;
+const resultKiwi = kiwiPrice * kiwiCount * kiwiCountryPercent / 100;
+const totalResultKiwi = kiwiPrice * kiwiCount + resultKiwi;
 
 const finPraceFor = `Final price for`;
 
-const totalResult = resultApple + resultOrange + resultkiwi;
+const totalResult = totalResultApple + totalResultOrange + totalResultKiwi;
 
 
-console.log(`${captionString.replace('=', '-')} ${day }.${mont}.${yea} `)
+console.log(`${captionString.replace('=', '-')} ${day }.${month}.${year} `)
 
-console.log(`${finPraceFor} ${appleCount} ${aplle} = ${resultApple.toFixed()} UAH` )
-console.log(`${finPraceFor} ${orangeCount} ${orange} = ${resultOrange.toFixed()} UAH`)
-console.log(`${finPraceFor} ${kiwiCount} ${kiwi} = ${resultkiwi.toFixed()} UAH`)
+console.log(`${finPraceFor} ${appleCount} ${aplle} = ${totalResultApple.toFixed()} UAH` )
+console.log(`${finPraceFor} ${orangeCount} ${orange} = ${totalResultOrange.toFixed()} UAH`)
+console.log(`${finPraceFor} ${kiwiCount} ${kiwi} = ${totalResultKiwi.toFixed()} UAH`)
 
 console.log(`Final price for all products = ${totalResult.toFixed()} UAH`);
