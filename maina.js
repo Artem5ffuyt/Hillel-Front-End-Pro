@@ -62,3 +62,42 @@ let arrNumb = youAge;
 console.log(youAge)
 
 */
+
+
+
+let promptHorC = prompt(`hamburger or cheeseburger`)
+let confChess;
+let confPotato;
+
+
+if(promptHorC ==`hamburger`|| promptHorC == " " ||promptHorC == NaN ||promptHorC == null ){
+document.write
+(`<h2 class = "list">Your order:
+<ul>
+  <li>Bulka 🍔: <>hamburger</li>
+</ul>
+<p>Price: $<10>`)
+}
+
+
+if(promptHorC ==`cheeseburger`){
+  confChess = confirm(`Would you like to add double cheese?`)
+    if(confChess){
+      document.write
+      (`<h2 class = "list">Your order:
+      <ul>
+        <li>Bulka 🍔: <>cheeseburger</li>
+      <p>Price: $<20>`)
+    }
+  confPotato = confirm(`Would you like potato?`) 
+  
+  document.write
+(`<h2 class = "list">Your order:
+<ul>
+  <li>Bulka 🍔: <>cheeseburger</li>
+<p>Price: $<15>`)
+}
+
+
+document.write (`</h2>`)
+
