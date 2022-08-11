@@ -63,41 +63,66 @@ console.log(youAge)
 
 */
 
+let cheeseburger = 15;
+let hamburger = 10;
+let cheese =5;
+let small =10;
+let midle = 15;
+let big = 20;
+let ketchup = 2;
+let mayonnaise =3;
+let price = 0;
 
-
-let promptHorC = prompt(`hamburger or cheeseburger`)
+let promptHomCh = prompt(`hamburger or cheeseburger`)
 let confChess;
 let confPotato;
+let promptPotato;
 
-
-if(promptHorC ==`hamburger`|| promptHorC == " " ||promptHorC == NaN ||promptHorC == null ){
-document.write
+if(promptHomCh ==`hamburger`|| promptHomCh == " " ||promptHomCh == NaN ||promptHomCh == null ){
+  price = hamburger 
+  document.write
 (`<h2 class = "list">Your order:
 <ul>
   <li>Bulka 🍔: <>hamburger</li>
 </ul>
-<p>Price: $<10>`)
+<p>Price: $<${price}>`)
 }
-
-
-if(promptHorC ==`cheeseburger`){
+if(promptHomCh ==`cheeseburger`){
   confChess = confirm(`Would you like to add double cheese?`)
-    if(confChess){
-      document.write
-      (`<h2 class = "list">Your order:
-      <ul>
-        <li>Bulka 🍔: <>cheeseburger</li>
-      <p>Price: $<20>`)
-    }
   confPotato = confirm(`Would you like potato?`) 
   
-  document.write
-(`<h2 class = "list">Your order:
-<ul>
-  <li>Bulka 🍔: <>cheeseburger</li>
-<p>Price: $<15>`)
 }
 
 
-document.write (`</h2>`)
+if(confChess) {
+  price =  cheeseburger + cheese
+  document.write(`<h2>Your order:</h2>
+	<ul>
+		<li>Bulka 🍔: <Тип булки>cheeseburger</li>
+	</ul>
+  <p>Price: $<Фінальна ціна>${price}</p>`);
+}else if(confChess == false ){
+  price = cheeseburger
+  document.write(`<h2>Your order:</h2>
+	<ul>
+		<li>Bulka 🍔: <Тип булки>cheeseburger</li>
+	</ul>
+  <p>Price: $<Фінальна ціна>${price}</p>`);
+}
+
+
+if(confPotato) promptPotato = prompt(`Choose potato size: small/middle/big`)
+if(promptPotato == `small`){
+  price + small
+  document.write(`<h2>Your order:</h2>
+	<ul>
+		<li>Bulka 🍔: <Тип булки>cheeseburger</li>
+		<li>Potato 🍟: <Розмір картоплі>small</li>
+	</ul>
+  <p>Price: $<Фінальна ціна>${price} </p>`);
+}
+
+
+
+
 
