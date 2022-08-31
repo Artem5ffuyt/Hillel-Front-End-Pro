@@ -1,0 +1,30 @@
+table{
+    border-collapse: collapse;
+    color: black;
+    margin-bottom: 20px;
+}
+
+td{
+    border: 1px solid black;
+}
+.one{
+    color: black;
+    font-weight: bold; 
+   
+}
+
+.two{
+
+    color: black;
+    font-weight: bold; 
+    position:absolute;
+    margin-top: 15%; 
+
+}
+
+
+.tableTwo {
+   
+  
+   
+}
