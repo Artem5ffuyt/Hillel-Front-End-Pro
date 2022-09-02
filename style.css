@@ -1,12 +1,15 @@
 table{
 
-
-
+    border: 1px solid black;
 }
 
-
+caption {
+    font-size: 14px;
+    font-weight: bold; 
+}
 
 td{
+    font-size: 15px;
     border: 1px solid black;
 }
 
