@@ -1,16 +1,10 @@
 table{
+    border-collapse: collapse;
 
-    border: 1px solid black;
 }
-
-caption {
-    font-size: 14px;
-    font-weight: bold; 
-}
-
-td{
-    font-size: 15px;
+th,td{
     border: 1px solid black;
+    padding: 10px;
 }
 
 
