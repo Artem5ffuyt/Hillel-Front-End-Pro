@@ -1,29 +1,35 @@
-const obj = {
-    x: 10,
-    y: 20,
-    inner: {
-        x: 20,
-        z: 30
-    },
-    foo2: {
-        k: 23,
-        p: 13
-    }
-} 
 
-function convert(obj) {
-let newObj = {};
 
-for(let key in obj){
- if((typeof obj[key]) == "object") {
-    Object.assign(newObj, convert(obj[key]));
- }
- else{
-    newObj[key] = obj[key];
- }
+
+
+const products = [
+	['apple',10],
+	['banana',8],
+	['mango',20],
+	['grape',18]
+]
+let copiedProducts = [];
+
+        function getPrice(products,seasonFunc){
+            let total = 0;
+            copiedProducts = JSON.parse(JSON.stringify(products));
+            copiedProducts
+            .map( item =>{
+                copiedProducts += item[1]
+                return total;
+            })
+            return typeof seasonFunc === `function`? seasonFunc (total) : total;
+        
+        }
+    
+
+function summerValue(products){
+	return products*0.8;
 }
-return newObj;
+
+function winterValue(products){
+	return products*2;
 }
-let flatObj = convert(obj);
-
-
+console.log( getPrice(products));
+console.log( getPrice(products, winterValue));
+console.log( getPrice(products, summerValue));
