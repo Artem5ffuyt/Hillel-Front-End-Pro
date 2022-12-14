@@ -1,17 +1,13 @@
 
-const element = document.querySelector(`#element`);
-
-const form = document.querySelector(`#form`);
-const elementShape = document.querySelector (`#elementOne`);
-const elementBg = document.querySelector(`#elementTwo`);
-
-form.addEventListener(`submit`, e => {
-    e.preventDefault();
-
-    element.className = elementShape.value;
-    element.style.background = elementBg.value;
-})
-
-  
-
+function repairClok(ClokName){
+    if(ClokName === `Casio N112`){
+        return 100;
+    }else if (ClokName === `rollex 333`){
+        return 10000;
+    }else{
+        return 300;
+    }
+}
+ let priceForRepeir = repairClok(`casio N112`)
+console.log(priceForRepeir)
 
