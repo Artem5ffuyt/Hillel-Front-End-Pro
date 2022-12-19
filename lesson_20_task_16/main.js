@@ -1,5 +1,5 @@
 
-const block = document.querySelector(`#block`);
+const block = document.querySelector(`#block`)
 const boom = document.querySelector(`#bams`);
 
 const initHeight = block.offsetHeight;
