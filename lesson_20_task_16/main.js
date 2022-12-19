@@ -2,14 +2,14 @@
 const block = document.querySelector(`#block`);
 const boom = document.querySelector(`#bams`);
 
-const initHeight = block.offsetHeight;
-const initWidth = block.offsetWidth;
-const initBorderWidth = block.offsetHeight - block.scrollHeight;
+const mineHeight = block.offsetHeight;
+const mineWidth = block.offsetWidth;
+const mineBorderWidth = block.offsetHeight - block.scrollHeight;
 
 block.style.left = 0;
 block.style.top = 0;
 
-const getRandomIntInclusive = (min = 0, max = 255) => {
+const randomMineInclusive = (min = 0, max = 255) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -70,9 +70,9 @@ const crouch = () => {
     block.style.borderBottomWidth = (block.offsetHeight - block.scrollHeight) * 0.6 + `px`;
 
     setTimeout(() => {
-        block.style.height = initHeight + `px`;
-        block.style.width = initWidth + `px`;
-        block.style.borderBottomWidth = initBorderWidth + `px`;
+        block.style.height = mineHeight + `px`;
+        block.style.width = mineWidth + `px`;
+        block.style.borderBottomWidth = mineBorderWidth + `px`;
         
         return
     }, 1000);
@@ -80,8 +80,7 @@ const crouch = () => {
 }
 
 const bams = () => {
-    // block.innerHTML = `БУЦЬ`;
-    // setTimeout(() => block.innerHTML = ``, 1000);
+ 
     boom.classList.add(`visible`);
     
     let changecolor = setInterval(() => {
