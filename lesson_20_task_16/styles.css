@@ -23,15 +23,11 @@ body{
     position: absolute;
     opacity: 0; 
     transition: 0.5s;
+    color: blue;
 }
 
 .jump{
-    animation: jump .4s ease;
-}
-
-.visible{
-   transform: scale(5);
-   opacity: 1; 
+    animation: jump .5s ease;
 }
 
 @keyframes jump {
@@ -42,3 +38,11 @@ body{
         transform: translateY(0px)
     }
   }
+
+.transformation{
+   transform: scale(5);
+   opacity: 1; 
+}
+
+
+  

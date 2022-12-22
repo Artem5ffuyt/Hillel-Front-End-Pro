@@ -1,28 +1,18 @@
 
-const block = document.querySelector(`#block`)
+const block = document.querySelector(`#block`);
 const boom = document.querySelector(`#bams`);
+
+block.style.left = 0;
+block.style.top = 0;
 
 const mineHeight = block.offsetHeight;
 const mineWidth = block.offsetWidth;
 const mineBorderWidth = block.offsetHeight - block.scrollHeight;
 
-block.style.left = 0;
-block.style.top = 0;
-
 const randomMineInclusive = (min = 0, max = 255) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
-}
-    
-const getRandomColor = () => {
-    let colorDigits = [];
-    
-    for (let i = 0; i <= 2; i++) {
-        colorDigits.push(getRandomIntInclusive())      
-    }
-    
-    return `rgb(${colorDigits.join(`,`)})`
 }
 
 const STEP = 10;
@@ -64,7 +54,7 @@ const jump = () => {
     setTimeout(() => block.classList.remove(`jump`), 1000);
 }
 
-const crouch = () => {
+const down = () => {
     block.style.height = block.offsetHeight * 0.6 + `px`;
     block.style.width = block.offsetWidth * 0.75 + block.offsetWidth + `px`;
     block.style.borderBottomWidth = (block.offsetHeight - block.scrollHeight) * 0.6 + `px`;
@@ -80,16 +70,10 @@ const crouch = () => {
 }
 
 const bams = () => {
- 
-    boom.classList.add(`visible`);
-    
-    let changecolor = setInterval(() => {
-        boom.style.color = getRandomColor()
-    }, 400);
-
-    setTimeout(() => {
-        boom.classList.remove(`visible`);
-        clearInterval(changecolor);
+  boom.classList.add(`transformation`);
+  setTimeout(() => {
+  boom.classList.remove(`transformation`);
+  clearInterval();
     }, 1000);
 }
 
@@ -98,14 +82,16 @@ const ACTIONS = {
     38: movingUp,
     39: movingRight,
     40: movingDown,
-    17: crouch,
+    17: down,
     32: jump
 }
+
+document.addEventListener(`keydown`, e => ACTIONS[e.keyCode] && ACTIONS[e.keyCode]());
 
 const getBodyWidth = () => document.body.offsetWidth;
 const getBodyHeight = () => document.body.offsetHeight;
 const getBlockRightCoordinate = () => block.offsetLeft+block.offsetWidth;
 const getBlockBottomCoordinate = () => block.offsetTop+block.offsetHeight;
 
-document.addEventListener(`keydown`, e => ACTIONS[e.keyCode] && ACTIONS[e.keyCode]());
+
 
