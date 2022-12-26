@@ -5,14 +5,13 @@ let userFirstName
     ,email
     ,yearOfBirth
     ,currentYear = new Date().getFullYear()
-    ,age
-    ;
+    ,age;
 
 do{
     userFirstName = prompt(`Enter your first name:`);
     if(userFirstName) userFirstName = userFirstName.trim()
 } while(!userFirstName)
-console.log( userFirstName )
+
 do{
     userLastName = prompt(`Enter your last name:`);
     if(userLastName) userLastName = userLastName.trim()
