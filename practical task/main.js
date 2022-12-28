@@ -2,6 +2,7 @@ let enterFirstName = ``
 ,enterLastName = ``
 ,capitalizedFirstName
 ,capitalizedLastName
+, email
 
 do{
     enterFirstName = prompt(`Enter your first name:`);
@@ -39,6 +40,11 @@ if (userLastName.includes(` `) || enterLastName.includes(`-`)) {
 } else {
         capitalizedLastName += userLastName.slice(1);
     }
+
+do {
+     email = prompt(`Enter your email:`);
+    if(email) email = email.replaceAll(` `,``).toLowerCase();
+ } while(!email || !email.includes(`@`) || email.startsWith(`@`) || email.endsWith(`@`) || !email.includes(`.`) || email.indexOf(`.`) < email.indexOf(`@`) || email.startsWith(`.`) || email.endsWith(`.`))
 
 
 
