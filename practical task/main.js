@@ -2,7 +2,10 @@ let enterFirstName = ``
 ,enterLastName = ``
 ,capitalizedFirstName
 ,capitalizedLastName
-, email
+,email
+,yearOfBirth
+,currentYear = new Date().getFullYear()
+,age;
 
 do{
     enterFirstName = prompt(`Enter your first name:`);
@@ -14,9 +17,20 @@ do{
          if(enterLastName) enterLastName = enterLastName.trim()
 } while (!enterLastName) 
 
+do {
+    email = prompt(`Enter your email:`);
+   if(email) email = email.replaceAll(` `,``).toLowerCase();
+} while(!email || !email.includes(`@`) || email.startsWith(`@`) || email.endsWith(`@`) || !email.includes(`.`) || email.indexOf(`.`) < email.indexOf(`@`) || email.startsWith(`.`) || email.endsWith(`.`))
 
 
-    capitalizedFirstName += enterFirstName[0].toUpperCase();
+do{
+    yearOfBirth = prompt(`Enter your year of birth:`);
+if(yearOfBirth) yearOfBirth = parseInt(yearOfBirth.replaceAll(' ',''))
+} while(!yearOfBirth || yearOfBirth >= currentYear || isNaN(yearOfBirth))
+
+age = currentYear - yearOfBirth;
+
+capitalizedFirstName += enterFirstName[0].toUpperCase();
  if (enterFirstName.includes(` `) || enterFirstName.includes(`-`)) {
      for (let i=1; i<enterFirstName.length;i++){
          if (enterFirstName[i-1] === ` ` || enterFirstName[i-1] === `-`) {capitalizedFirstName += enterFirstName[i].toUpperCase();
@@ -30,7 +44,7 @@ do{
 
 
 capitalizedLastName += enterLastName[0].toUpperCase();
-if (userLastName.includes(` `) || enterLastName.includes(`-`)) {
+if (enterLastName.includes(` `) || enterLastName.includes(`-`)) {
     for (let i=1; i<userLastName.length;i++){
         if (enterLastName[i-1] === ` ` || enterLastName[i-1] === `-`) {capitalizedLastName += enterLastName[i].toUpperCase();
         continue
@@ -38,28 +52,17 @@ if (userLastName.includes(` `) || enterLastName.includes(`-`)) {
     capitalizedLastName += enterLastName[i]
     } 
 } else {
-        capitalizedLastName += userLastName.slice(1);
+        capitalizedLastName += enterLastName.slice(1);
     }
 
-do {
-     email = prompt(`Enter your email:`);
-    if(email) email = email.replaceAll(` `,``).toLowerCase();
- } while(!email || !email.includes(`@`) || email.startsWith(`@`) || email.endsWith(`@`) || !email.includes(`.`) || email.indexOf(`.`) < email.indexOf(`@`) || email.startsWith(`.`) || email.endsWith(`.`))
 
 
 
-
-
-        console.log(enterFirstName)
-        console.log(enterLastName)
-// while(!enterFerstName || enterFerstName.startsWith(`@`) || enterFerstName.includes(`@`)){
-//     let enterFerstName = prompt(`enter your first name`)
-// }
-
-
-
-
-
+document.write(`<ul>
+     <li> Full name: ${capitalizedFirstName} ${capitalizedLastName}</li>
+     <li> Email: ${email}</li>
+     <li> Age: ${age}</li>
+     </ul>`)
 
 
 // let userFirstName
