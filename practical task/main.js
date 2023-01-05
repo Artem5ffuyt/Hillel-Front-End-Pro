@@ -1,8 +1,19 @@
-let client = 5;
-for(let i=1; i<=client; i++){
-    console.log(i)
-}
+// let client = 5;
+// for(let i=1; i<=client; i++){
+    
 
+//     console.log([i])
+
+// }
+let str = `Hello word`
+let hasNamber = false;
+for( let i; i<str.length; i++){
+    let leater = str[i];
+    if(!isNaN(leater) && leater!==``){
+        hasNamber = true;
+        break;
+    }
+}
 
 
 // let enterFirstName = ``
