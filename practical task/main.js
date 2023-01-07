@@ -5,15 +5,38 @@
 //     console.log([i])
 
 // }
-let str = `Hello word`
-let hasNamber = false;
-for( let i; i<str.length; i++){
-    let leater = str[i];
-    if(!isNaN(leater) && leater!==``){
-        hasNamber = true;
-        break;
-    }
+
+// let str = `Hello word`
+// let hasNamber = false;
+// for( let i; i<str.length; i++){
+//     let leater = str[i];
+//     if(!isNaN(leater) && leater!==``){
+//         hasNamber = true;
+//         break;
+//     }
+// }
+ 
+
+
+// Lesson _6 
+// regular expressions
+let userWords =prompt(`wwwwww`)
+if (userWords) {
+let words =3;
+let word = ``;
+    
+for (let i = 1; i<= words; i++) {
+do{
+   word = prompt(`Enter Neme #${i}`)
+}while(!word || word.match(/\d/))
 }
+console.log(word)
+}
+
+
+
+
+
 
 
 // let enterFirstName = ``
