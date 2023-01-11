@@ -1,12 +1,49 @@
 
 // lesson_8
 // ----------------------------------------------------
-let arr = [2,2,2,2,2,33,33,31];
-let arr2 = [`snooppp`]
-for (let i; i<arr.length; i++){
 
+sports = [
+	['skier','⛷'],
+	['snowboarder','🏂'],
+	['apple','🍎'],
+	['hockey','🏒'],
+	['ice skate','⛸'],
+	['swimmer','🏊'],
+	['surfer','🏄‍'],
+	['watermelon','🍉'],
+	['lemon','🍋'],
+	['rowboat','🚣'],
+	['bicyclist','🚴‍']
+];
+
+let summer_sports = sports.slice(5)
+,winter_sports = sports.slice(0,5)
+,fruits = winter_sports.splice(2,1).concat(summer_sports.splice(2,2));
+ 
+
+console.log(`*** Winter sports ***`)
+for (sport of winter_sports) {
+    console.log(sport.join(`: `));
 }
-console.log(arr2)
+
+console.log(`*** Summer sports ***`)
+for (sport of summer_sports) {
+    console.log(sport.join(`: `));
+}
+
+console.log(`*** Fruits ***`)
+for (fruit of fruits) {
+    console.log(fruit.join(`: `));
+}
+// console.log(``summer_sports);
+// console.log(fruits);
+
+// let arr = [2,2,2,2,2,33,33,31];
+// let arr2 = [`snooppp`]
+// for (let i; i<arr.length; i++){
+
+// }
+// console.log(arr2)
 
 
 // Copy of array
