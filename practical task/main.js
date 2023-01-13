@@ -2,39 +2,57 @@
 // lesson_8
 // ----------------------------------------------------
 
-sports = [
-	['skier','⛷'],
-	['snowboarder','🏂'],
-	['apple','🍎'],
-	['hockey','🏒'],
-	['ice skate','⛸'],
-	['swimmer','🏊'],
-	['surfer','🏄‍'],
-	['watermelon','🍉'],
-	['lemon','🍋'],
-	['rowboat','🚣'],
-	['bicyclist','🚴‍']
-];
+let usersCopied = [];
+let users =[1,12,33];
+for(let i=0; i<users.length; i++){
+    let user = users[i]; // [`Anna`, 23]
 
-let summer_sports = sports.slice(5)
-,winter_sports = sports.slice(0,5)
-,fruits = winter_sports.splice(2,1).concat(summer_sports.splice(2,2));
+    if(Array.isArray(user)){
+        let innerArray = [];
+        for(let j=0; j<user.length; j++){ // [`Anna`, 23]
+            innerArray.push(user[j]); // `Anna`
+        }
+        // [`Anna`, 23]
+        usersCopied.push(innerArray);
+    } else{
+        usersCopied.push(user);
+    }
+
+}
+
+// sports = [
+// 	['skier','⛷'],
+// 	['snowboarder','🏂'],
+// 	['apple','🍎'],
+// 	['hockey','🏒'],
+// 	['ice skate','⛸'],
+// 	['swimmer','🏊'],
+// 	['surfer','🏄‍'],
+// 	['watermelon','🍉'],
+// 	['lemon','🍋'],
+// 	['rowboat','🚣'],
+// 	['bicyclist','🚴‍']
+// ];
+
+// let summer_sports = sports.slice(5)
+// ,winter_sports = sports.slice(0,5)
+// ,fruits = winter_sports.splice(2,1).concat(summer_sports.splice(2,2));
  
 
-console.log(`*** Winter sports ***`)
-for (sport of winter_sports) {
-    console.log(sport.join(`: `));
-}
+// console.log(`*** Winter sports ***`)
+// for (sport of winter_sports) {
+//     console.log(sport.join(`: `));
+// }
 
-console.log(`*** Summer sports ***`)
-for (sport of summer_sports) {
-    console.log(sport.join(`: `));
-}
+// console.log(`*** Summer sports ***`)
+// for (sport of summer_sports) {
+//     console.log(sport.join(`: `));
+// }
 
-console.log(`*** Fruits ***`)
-for (fruit of fruits) {
-    console.log(fruit.join(`: `));
-}
+// console.log(`*** Fruits ***`)
+// for (fruit of fruits) {
+//     console.log(fruit.join(`: `));
+// }
 // console.log(``summer_sports);
 // console.log(fruits);
 
